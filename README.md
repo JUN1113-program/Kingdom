@@ -1,4 +1,4 @@
-# Kingdom
+# 王様Kingdom
 2015年に作成したjavaのGUIアプリケーション
 
 ### アプリケーション概要
@@ -42,7 +42,7 @@ Main.java、Opening.java、Battle.java、Select.java、Go.java、SunMoon.java、
 すると左側に選択された国民の名前と強さが 4 人分表示される。  
 その 4 人が気に入らなければ「リセットボタン」を押してボタンを最初の状態に戻す。  
 その 4 人が気に入ったならば「決定」ボタンを押し、次の Go パネルに切り替わる。
-
+[![Image from Gyazo](https://i.gyazo.com/55ebb0324aef06cff4a030f29f17c39c.gif)](https://gyazo.com/55ebb0324aef06cff4a030f29f17c39c)
 #### Go パネルでの操作  
 まず先ほど選択した 4 人の国民の名前と強さが上段 2 行 2 列で表示される。
 4 人の中からまず一人を選んでボタンを押すと、そのプレイヤーの装備を選択する画面が表示される。  
@@ -52,19 +52,21 @@ Main.java、Opening.java、Battle.java、Select.java、Go.java、SunMoon.java、
 以上の行程を他の 3 人にも適応し、全員が装備を得た状態を作り出す。  
 その状態に満足できなければ左下の「装備を外す」ボタンを選択し、もう一度やり直す。  
 満足できたならば右下の「出発させる」ボタンを押し次の Sun Moon パネルに切り替える。  
-
+[![Image from Gyazo](https://i.gyazo.com/5f94282bd7eafb3c5ea3b57232bf7286.gif)](https://gyazo.com/5f94282bd7eafb3c5ea3b57232bf7286)
 #### Sun Moon パネルでの操作  
 このパネルではユーザーが操作することは何もなく、太陽と月がぐるぐる周り、王様が右に左に移動する状況 を見ているだけである。
 今回は王様が 2 周したら終わりになるよう設定していて、次の Report パネルに切り替わる。  
 ※もっと早くアニメーションを終わらせたい場合は SunMoon.java における animation メソッドの Thread.sleep の設定時間を短くする。
-
+[![Image from Gyazo](https://i.gyazo.com/88b3624c179031d6a4127dde645df754.gif)](https://gyazo.com/88b3624c179031d6a4127dde645df754)
 #### Report パネルでの操作 まず画面に戦闘結果と「より詳しい経過報告へ」と表記されたボタンが出現するのでボタンを押す。  
 すると画面左上には王様への報告書、画面右上には勝利回数、敗北回数、経験値、ドロップの有無が表示される。  
 その状況を確認して左下の「帰還させる」ボタンを押すか、右下のボタンを選択する。  
 「帰還させる」ボタンが押された場合は、Go パネルの画面まで戻り装備を再選択することが出来る。  
 右下のボタンは戦闘状況によって変化する。  
+[![Image from Gyazo](https://i.gyazo.com/f4af7cf19b8a3abe520743f9ba833f3a.gif)](https://gyazo.com/f4af7cf19b8a3abe520743f9ba833f3a)
 無事に敵に勝てた場合は「引き続き進む」ボタンが表示され、押すと Sun Moon パネルに戻る。  
 ただし戦う相手は次の敵へと切り替わる。  
+[![Image from Gyazo](https://i.gyazo.com/c5cf4d3cafe90c298322fca46da01592.gif)](https://gyazo.com/c5cf4d3cafe90c298322fca46da01592)
 敵に負けてしまった場合は「もう一度挑戦する」ボタンが表示され、押すと Sun Moon パネルに戻る。  
 ただし戦う相手は今さっき戦った相手のままである。  
 敵に惨敗してしまった場合は「国民を選定する」ボタンが表示され、押すと Select パネルに戻る。  
