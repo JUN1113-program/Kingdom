@@ -7,8 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
-//import javax.swing.OverlayLayout;
+import javax.swing.OverlayLayout;
 
 public class SunMoon extends JPanel {
 	Image moon;
@@ -89,10 +88,12 @@ public class SunMoon extends JPanel {
 		}
 	void animation(){
 		//透明化したボタンを配置し、押される度にアニメーションの再生速度を上昇させる。（MAC上では正常に動作せず。）
-		//new OverlayLayout(Main.SunMoonPanel);
-		//acButton.setBounds(getWidth(),0,30,30);
-		//Main.SunMoonPanel.add(acButton,"ac");
-		//acButton.setContentAreaFilled(false);
+		new OverlayLayout(Main.SunMoonPanel);
+		acButton.setBounds(getWidth(),0,30,30);
+		Main.SunMoonPanel.add(acButton,"ac");
+		acButton.setContentAreaFilled(false);
+		acButton.setOpaque(false);
+		acButton.setBorderPainted(false);
 	
 		for(i=5;;i++){
 			if(i==2){
